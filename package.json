@@ -1,0 +1,28 @@
+{
+  "name": "rxjs-web-animation",
+  "version": "0.0.0",
+  "description": "Reactive animations for the web with RxJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benlesh/rxjs-web-animation.git"
+  },
+  "keywords": [
+    "rxjs",
+    "rx",
+    "animation"
+  ],
+  "author": "Ben Lesh <ben@benlesh.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benlesh/rxjs-web-animation/issues"
+  },
+  "homepage": "https://github.com/benlesh/rxjs-web-animation",
+  "dependencies": {
+    "rxjs": "^6.5.2",
+    "typescript": "^3.5.3"
+  }
+}
