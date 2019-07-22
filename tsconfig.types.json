@@ -1,0 +1,14 @@
+{
+  "include": [
+    "src/**/*.ts"
+  ],
+  "compilerOptions": {
+    "outDir": "dist/typings/",
+    "module": "es2015",
+    "target": "es2015",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "removeComments": false,
+    "moduleResolution": "node"
+  }
+}

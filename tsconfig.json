@@ -1,0 +1,17 @@
+{
+  "include": [
+    "src/**/*.ts"
+  ],
+  "compilerOptions": {
+    "outDir": "dist/esm",
+    "module": "es2015",
+    "target": "es2015",
+    "alwaysStrict": true,
+    "strictFunctionTypes": true,
+    "moduleResolution": "node",
+    "lib": [
+      "es2015",
+      "dom"
+    ]
+  }
+}

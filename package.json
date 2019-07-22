@@ -1,10 +1,17 @@
 {
   "name": "rxjs-web-animation",
-  "version": "0.0.0",
+  "version": "0.0.6",
   "description": "Reactive animations for the web with RxJS",
-  "main": "index.js",
+  "main": "dist/rxjs-web-animation.umd.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/typings/index.d.ts",
+  "files": [
+    "dist/**/*.js"
+  ],
   "scripts": {
-    "test": "test"
+    "build": "shx rm -rf dist/ && tsc -p tsconfig.json && rollup -c && tsc -p tsconfig.types.json",
+    "test": "test",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,7 +29,17 @@
   },
   "homepage": "https://github.com/benlesh/rxjs-web-animation",
   "dependencies": {
-    "rxjs": "^6.5.2",
     "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "rollup": "^1.16.7",
+    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rxjs": "^6.5.2",
+    "shx": "^0.3.2"
   }
 }

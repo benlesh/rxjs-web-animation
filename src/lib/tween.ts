@@ -1,8 +1,7 @@
 import { duration } from './duration';
 import { FRAMES } from './frames';
-import { map } from 'rxjs/operators';
+import { map, takeWhile, endWith } from 'rxjs/operators';
 import { Observable, identity } from 'rxjs';
-import { EasingFunction } from './types';
 
 /**
  * Configuration for a {@link tween} call.
@@ -27,7 +26,7 @@ export interface TweenConfig {
   /**
    * An optional easing function
    */
-  easing?: EasingFunction;
+  easing?: (input: number) => number; // TODO: create a type.
 }
 
 /**
@@ -38,9 +37,14 @@ export interface TweenConfig {
  * 
  * @param config The tween configuration
  */
-export function tween({ start, end, duration: ms, easing = identity, frames = FRAMES }: TweenConfig) {
+export function tween({
+  start,
+  end,
+  duration: ms,
+  easing = identity,
+  frames = FRAMES
+}: TweenConfig) {
   const diff = end - start;
-  return duration(ms, frames).pipe(
-    map(d => easing(diff * d) + start)
-  );
+  // TODO: This may need to be optimized later
+  return duration(ms, frames).pipe(map(d => easing(d) * diff + start));
 }
