@@ -1,6 +1,6 @@
 {
   "name": "rxjs-web-animation",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Reactive animations for the web with RxJS",
   "main": "dist/rxjs-web-animation.umd.js",
   "module": "dist/esm/index.js",
