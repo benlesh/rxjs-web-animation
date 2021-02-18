@@ -1,2 +1,4 @@
 node_modules
 dist
+demos/**/*.js
+demos/**/*.js.map
