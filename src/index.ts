@@ -4,3 +4,4 @@ export * from './lib/easing';
 export * from './lib/frames';
 export * from './lib/tween';
 export * from './lib/velocity';
+export * from './lib/spring';
